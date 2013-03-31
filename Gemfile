@@ -1,9 +1,11 @@
 source 'http://rubygems.org'
 
+ruby "2.0.0"
+gem 'rails', '4.0.0.beta1'
+
 gemspec
 
 # dependencies for the dummy app
-gem 'rails', '>= 3.2.8'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'teabag'
