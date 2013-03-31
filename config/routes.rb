@@ -1,5 +1,5 @@
 Mercury::Engine.routes.draw do
-  post '/editor(/*requested_uri)' => "mercury#edit", :as => :mercury_editor
+  get '/editor(/*requested_uri)' => "mercury#edit", :as => :mercury_editor
 
   scope '/mercury' do
     get ':type/:resource' => "mercury#resource"
