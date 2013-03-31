@@ -1,9 +1,9 @@
 Mercury::Engine.routes.draw do
-  match '/editor(/*requested_uri)' => "mercury#edit", :as => :mercury_editor, :via => :post
+  post '/editor(/*requested_uri)' => "mercury#edit", :as => :mercury_editor
 
   scope '/mercury' do
-    match ':type/:resource' => "mercury#resource", :via => :get
-    match 'snippets/:name/options' => "mercury#snippet_options", :via => :get
-    match 'snippets/:name/preview' => "mercury#snippet_preview", :via => :get
+    get ':type/:resource' => "mercury#resource"
+    get 'snippets/:name/options' => "mercury#snippet_options"
+    get 'snippets/:name/preview' => "mercury#snippet_preview"
   end
 end
